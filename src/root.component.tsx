@@ -9,7 +9,7 @@ export default function Root() {
         <Route path="/posts/:id">
           <SinglePost />
         </Route>
-        <Route path="/">
+        <Route path="/posts">
           <PostPage />
         </Route>
       </Switch>
