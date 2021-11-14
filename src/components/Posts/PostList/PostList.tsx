@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getPost, IPostData } from "../../../api/post.api";
 import { EachPost } from "../EachPost/EachPost";
+import { Button } from "antd";
 
 export const PostList: React.FC<{}> = () => {
   const [postData, setPostData] = useState<IPostData[]>([]);
@@ -28,7 +29,9 @@ export const PostList: React.FC<{}> = () => {
           <EachPost key={post.id} postData={post} />
         ))}
       </ul>
-      <button onClick={FetchHandler}>Fetch More</button>
+      <Button type="dashed" onClick={FetchHandler}>
+        Fetch More
+      </Button>
     </>
   );
 };
